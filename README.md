@@ -1,4 +1,4 @@
-# Transportation Data Discovery, Evaluation, Compilation, and Publication
+# Transportation Data Discovery, Evaluation, Compilation, Analysis, and Publication
 
 The Office of Spatial Analysis and Visualization is automating the publication of transportation data. Specifically, OSAV will employ computer learning and artificial intelligence to automate the identification, collection, evaluation, compilation, and publication of transportation data. The activities include, but are not limited to, analyzing, designing, developing, implementing, and maintaining computer programs that:
 - Identify and collect data from the Internet
