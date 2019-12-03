@@ -1,21 +1,16 @@
 # U.S.D.O.T. Passenger Travel Requirements
 
 1. Objectives
-   1. Define the known universe of North American trasportation providers (Providers).
-   2. Determine if the provider publishes useful Passenger Travel data.
-      1. What service is provided?
-      2. What is the spatial extent of the service?
-      3. When is that service provided?
+   1. Define the known universe of North American Transit and Intercity Bus providers (Providers).
+   2. Determine if the provider publishes data according to the General Transit Feed Specification.
    3. Determine if the provider particiaptes in the Department's Passenger Travel Initiatives. (The National Transit Map (NTM) and The  Intercity Bus Atlas (ICBA))
       1. If the provider participates then, <br> harvest, compile, analyze, publish, and archive the data at least once a year but not more than 4 times a year.
       2. If the provider does not participate then <br> Flag them for contact and assign a priority based volume of service.
-      3. Contact the provider and encourage their participation.
 2. Functional Requirements
    1. Data Discovery
       1. Data Tables
-         1. Maintain a Providers List; a list of known providers which includes their websites.  
-         2. Maintain a Visitation History; a list which tracks when a provider's website was last visited and wether or not the visit was productive. (Productive meaning useful informatino was found.)
-         3. Store Source Data in a central repository
+         1. Maintain a Providers List; a list of known providers which includes their websites.
+         2. Maintain a Visitation History; a list which tracks when a provider's website was last visited and wether or not the visit was productive. (Productive meaning GTFS data was collected.)
       2. Functions
          1. Every day, query the Visitation History table for websites which have not been visted in the last 90 days.
          2. Build a visitation schedule designed to minimize burden on provider resources.
