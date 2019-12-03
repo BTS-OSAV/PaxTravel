@@ -18,19 +18,19 @@
          4. Leave record of visitation on provider's server.				 
          5. Search website copies for GTFS URLs.
          6. Harvest GTFS Data
-            1. Track Sucesses
-            2. Track Failures
-         7. Update Collection History
-         8. Email GTFS Harvest report to provider 
-         9. Email GTFS Harvest Report to Dataset Manager
+            1. Track sucessful and failed downloads in the Collection History Table
+            2. Harvested GTFS feeds shall be stored on a USDOT server
+            3. Harvested GTFS feeds shall be publically available from a URL.
+         7. Email GTFS Harvest report to provider 
+         8. Email GTFS Harvest Report to Dataset Manager
       3. Business Rules
-         1. When practicable, be transparent when searching and harvesting from provider resources.  Report to to providers when their site as been searched when possible.
+         1. Be transparent when searching and harvesting from provider resources when practicable. Report to to providers when their site as been searched when possible.
          2. Collect as much metadata as possible (Work it Metadata Team to determine whats needed)
-         3. Reduce burden on Provider resources as much as possible. (E.g. visit site during off-peak hours)	 
-   2. Source Data Inventory
-      1. Harvested GTFS feeds shall be stored on a USDOT server
-      2. Harvested GTFS feeds shall be publically available from a URL.
-   3. Data Storage
-   4. Data Analysis	 
-   5. Data Publication
-   6. Data Archival
+         3. Reduce burden on provider resources as much as possible. (E.g. visit site during off-peak hours)	 
+   2. Data Compilation
+      1. QC Checks
+      2. Spatial Data Builds
+      3. Tabular Data Builds
+   3. Data Analysis
+   4. Data Publication
+   5. Data Archival
