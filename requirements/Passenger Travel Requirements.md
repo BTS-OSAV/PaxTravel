@@ -14,15 +14,18 @@
    1. Data Discovery
       1. Data Tables
          1. Maintain a Providers List; a list of known providers which includes their websites.  
-         2. Maintain a Visitation History; a list which tracks when a provider's website was last visited.
-         3. Store results in Source Data Inventory
+         2. Maintain a Visitation History; a list which tracks when a provider's website was last visited and wether or not the visit was productive. (Productive meaning useful informatino was found.)
+         3. Store Source Data in a central repository
       2. Functions
          1. Every day, query the Visitation History table for websites which have not been visted in the last 90 days.
          2. Build a visitation schedule designed to minimize burden on provider resources.
          3. Iterate the list of sites not visited in the last 90 days, at provideres convienience, and store copies of the websites.
          4. Leave record of visitation on provider's server.				 
          5. Search website copies for useful passenger travel data.
-         6. Store findings.
+         6. Store findings
+            1. Maintain a history of actions taken
+            2. Maintain a list of viable GTFS Fetch points
+            3. Maintain a list of 
       3. Business Rules
          1. Collect as much metadata as possible (Work it Metadata Team to determine whats needed)
          2. Reduce burden on Provider resources as much as possible. (E.g. visit site during off-peak hours)	 
