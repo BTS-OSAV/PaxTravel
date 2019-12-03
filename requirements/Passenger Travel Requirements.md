@@ -5,17 +5,15 @@
    2. Determine if the provider publishes useful Passenger Travel data.
       1. What service is provided?
       2. What is the spatial extent of the service?
-      3. When is that service provided.   
-	 3. Determine if the provider particiaptes in the Department's Passenger Travel Initiatives. (The National Transit Map (NTM) and The  Intercity Bus Atlas (ICBA))
-      1. If the provider participates then, <br>
-			harvest, compile, analyze, publish, and archive the data at least once a year but not more than 4 times a year.
-      2. If the provider does not participate	then <br>
-			Flag them for contact and assign a priority based volume of service.
+      3. When is that service provided?
+   3. Determine if the provider particiaptes in the Department's Passenger Travel Initiatives. (The National Transit Map (NTM) and The  Intercity Bus Atlas (ICBA))
+      1. If the provider participates then, <br> harvest, compile, analyze, publish, and archive the data at least once a year but not more than 4 times a year.
+      2. If the provider does not participate then <br> Flag them for contact and assign a priority based volume of service.
       3. Contact the provider and encourage their participation.
 2. Functional Requirements
    1. Data Discovery
       1. Data Tables
-	       1. Maintain a Providers List; a list of known providers which includes their websites.  
+         1. Maintain a Providers List; a list of known providers which includes their websites.  
          2. Maintain a Visitation History; a list which tracks when a provider's website was last visited.
          3. Store results in Source Data Inventory
       2. Functions
