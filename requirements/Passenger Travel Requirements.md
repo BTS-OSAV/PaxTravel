@@ -7,7 +7,7 @@
       1. If the provider participates then, <br> harvest, compile, analyze, publish, and archive the data at least once a year but not more than 4 times a year.
       2. If the provider does not participate then <br> Flag them for contact and assign a priority based volume of service.
 2. Functional Requirements
-   1. Data Discovery
+   1. Data Collection
       1. Data Tables
          1. Providers List; a list of known providers which includes their websites.
          2. Collection History; a list which tracks when a provider's website was last visited and wether or not the visit was productive. (Productive meaning GTFS data was collected.)
