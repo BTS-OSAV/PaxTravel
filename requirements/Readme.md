@@ -17,10 +17,9 @@
          3. Iterate the list of sites not visited in the last 90 days, at provideres convienience, and store copies of the websites.
          4. Leave record of visitation on provider's server.				 
          5. Search website copies for GTFS URLs.
-         6. Harvest GTFS Data
+         6. Harvest raw GTFS Data
             1. Track sucessful and failed downloads in the Collection History Table
-            2. Harvested GTFS feeds shall be stored on a USDOT server
-            3. Harvested GTFS feeds shall be publically available from a URL.
+            2. Harvested raw GTFS feeds shall be stored for QC checks
          7. Email GTFS Harvest report to provider 
          8. Email GTFS Harvest Report to Dataset Manager
       3. Business Rules
@@ -29,6 +28,11 @@
          3. Reduce burden on provider resources as much as possible. (E.g. visit site during off-peak hours)	 
    2. Data Compilation
       1. QC Checks
+         1. Strip raw GTFS files of tables and fields not included in the specification
+            1. Machine Read the spec
+            1. Create a file which can be used to test raw GTFS files against the specification.
+            1. Strip raw GTFS file of tables and fields not defined inthe specification.
+         1. Assign Agency IDs to the tables and records.            
       2. Spatial Data Builds
       3. Tabular Data Builds
    3. Data Analysis
