@@ -1,0 +1,115 @@
+id,File_Name,Field_Name,Type,Required
+1,agency.txt,agency_id,ID,*Conditionally Required*
+2,agency.txt,agency_name,Text,*Required*
+3,agency.txt,agency_url,URL,*Required*
+4,agency.txt,agency_timezone,Timezone,*Required*
+5,agency.txt,agency_lang,Language code,Optional
+6,agency.txt,agency_phone,Phone number,Optional
+7,agency.txt,agency_fare_url,URL,Optional
+8,agency.txt,agency_email,Email,Optional
+9,stops.txt,stop_id,ID,*Required*
+10,stops.txt,stop_code,Text,Optional
+11,stops.txt,stop_name,Text,*Conditionally Required*
+12,stops.txt,stop_desc,Text,Optional
+13,stops.txt,stop_lat,Latitude,*Conditionally Required*
+14,stops.txt,stop_lon,Longitude,*Conditionally Required*
+15,stops.txt,zone_id,ID,*Conditionally Required*
+16,stops.txt,stop_url,URL,Optional
+17,stops.txt,location_type,Enum,Optional
+18,stops.txt,parent_station,ID referencing stops.stop_id,*Conditionally Required*
+19,stops.txt,stop_timezone,Timezone,Optional
+20,stops.txt,wheelchair_boarding,Enum,Optional
+21,stops.txt,level_id,ID referencing levels.level_id,Optional
+22,stops.txt,platform_code,Text,Optional
+23,routes.txt,route_id,ID,*Required*
+24,routes.txt,agency_id,ID referencing agency.agency_id,*Conditionally required*
+25,routes.txt,route_short_name,Text,*Conditionally required*
+26,routes.txt,route_long_name,Text,*Conditionally required*
+27,routes.txt,route_desc,Text,Optional
+28,routes.txt,route_type,Enum,*Required*
+29,routes.txt,route_url,URL,Optional
+30,routes.txt,route_color,Color,Optional
+31,routes.txt,route_text_color,Color,Optional
+32,routes.txt,route_sort_order,Non-negative integer,Optional
+33,trips.txt,route_id,ID referencing routes.route_id,*Required*
+34,trips.txt,service_id,ID referencing calendar.service_id or calendar_dates.service_id,*Required*
+35,trips.txt,trip_id,ID,*Required*
+36,trips.txt,trip_headsign,Text,Optional
+37,trips.txt,trip_short_name,Text,Optional
+38,trips.txt,direction_id,Enum,Optional
+39,trips.txt,block_id,ID,Optional
+40,trips.txt,shape_id,ID referencing shapes.shape_id,Optional
+41,trips.txt,wheelchair_accessible,Enum,Optional
+42,trips.txt,bikes_allowed,Enum,Optional
+43,stop_times.txt,trip_id,ID referencing trips.trip_id,*Required*
+44,stop_times.txt,arrival_time,Time,*Conditionally required*
+45,stop_times.txt,departure_time,Time,*Conditionally required*
+46,stop_times.txt,stop_id,ID referencing stops.stop_id,*Required*
+47,stop_times.txt,stop_sequence,Non-negative integer,*Required*
+48,stop_times.txt,stop_headsign,Text,Optional
+49,stop_times.txt,pickup_type,Enum,Optional
+50,stop_times.txt,drop_off_type,Enum,Optional
+51,stop_times.txt,shape_dist_traveled,Non-negative float,Optional
+52,stop_times.txt,timepoint,Enum,Optional
+53,calendar.txt,service_id,ID,*Required*
+54,calendar.txt,monday,Enum,*Required*
+55,calendar.txt,tuesday,Enum,*Required*
+56,calendar.txt,wednesday,Enum,*Required*
+57,calendar.txt,thursday,Enum,*Required*
+58,calendar.txt,friday,Enum,*Required*
+59,calendar.txt,saturday,Enum,*Required*
+60,calendar.txt,sunday,Enum,*Required*
+61,calendar.txt,start_date,Date,*Required*
+62,calendar.txt,end_date,Date,*Required*
+63,calendar_dates.txt,service_id,ID referencing calendar.service_id or ID,*Required*
+64,calendar_dates.txt,date,Date,*Required*
+65,calendar_dates.txt,exception_type,Enum,*Required*
+66,fare_attributes.txt,fare_id,ID,*Required*
+67,fare_attributes.txt,price,Non-negative float,*Required*
+68,fare_attributes.txt,currency_type,Currency code,*Required*
+69,fare_attributes.txt,payment_method,Enum,*Required*
+70,fare_attributes.txt,transfers,Enum,*Required*
+71,fare_attributes.txt,agency_id,ID referencing agency.agency_id,*Conditionally Required*
+72,fare_attributes.txt,transfer_duration,Non-negative integer,Optional
+73,fare_rules.txt,fare_id,ID referencing fare_attributes.fare_id,*Required*
+74,fare_rules.txt,route_id,ID referencing routes.route_id,Optional
+75,fare_rules.txt,origin_id,ID referencing stops.zone_id,Optional
+76,fare_rules.txt,destination_id,ID referencing stops.zone_id,Optional
+77,fare_rules.txt,contains_id,ID referencing stops.zone_id,Optional
+78,shapes.txt,shape_id,ID,*Required*
+79,shapes.txt,shape_pt_lat,Latitude,*Required*
+80,shapes.txt,shape_pt_lon,Longitude,*Required*
+81,shapes.txt,shape_pt_sequence,Non-negative integer,*Required*
+82,shapes.txt,shape_dist_traveled,Non-negative float,Optional
+83,frequencies.txt,trip_id,ID referencing trips.trip_id,*Required*
+84,frequencies.txt,start_time,Time,*Required*
+85,frequencies.txt,end_time,Time,*Required*
+86,frequencies.txt,headway_secs,Non-negative integer,*Required*
+87,frequencies.txt,exact_times,Enum,Optional
+88,transfers.txt,from_stop_id,ID referencing stops.stop_id,*Required*
+89,transfers.txt,to_stop_id,ID referencing stops.stop_id,*Required*
+90,transfers.txt,transfer_type,Enum,*Required*
+91,transfers.txt,min_transfer_time,Non-negative integer,Optional
+92,pathways.txt,pathway_id,ID,*Required*
+93,pathways.txt,from_stop_id,ID referencing stops.stop_id,*Required*
+94,pathways.txt,to_stop_id,ID referencing stops.stop_id,*Required*
+95,pathways.txt,pathway_mode,Enum,*Required*
+96,pathways.txt,is_bidirectional,Enum,*Required*
+97,pathways.txt,length,Non-negative Float,Optional
+98,pathways.txt,traversal_time,Positive Integer,Optional
+99,pathways.txt,stair_count,Non-null Integer,Optional
+100,pathways.txt,max_slope,Float,Optional
+101,pathways.txt,min_width,Positive Float,Optional
+102,pathways.txt,signposted_as,Text,Optional
+103,pathways.txt,reversed_signposted_as,Text,Optional
+104,levels.txt,level_id,ID,*Required*
+105,levels.txt,level_index,Float,*Required*
+106,levels.txt,level_name,Text,Optional
+107,feed_info.txt,feed_publisher_name,Text,*Required*
+108,feed_info.txt,feed_publisher_url,URL,*Required*
+109,feed_info.txt,feed_lang,Language code,*Required*
+110,feed_info.txt,feed_start_date,Date,Optional
+111,feed_info.txt,feed_end_date,Date,Optional
+112,feed_info.txt,feed_version,Text,Optional
+113,feed_info.txt,feed_contact_email,Email,Optional
+114,feed_info.txt,feed_contact_url,URL,Optional
